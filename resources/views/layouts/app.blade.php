@@ -52,6 +52,10 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    @if(!isset(Auth::guard('admin')->user()->id) && empty(Auth::guard('admin')->user()->id) && Auth::guest())
+                        <li><a href="{{ url('/admin/login') }}">Admin Login</a></li>
+                        <li><a href="{{ url('/admin/register') }}">Admin Register</a></li>
+                    @endif
                     <!-- Authentication Links -->
                     @if(!isset(Auth::guard('admin')->user()->id) && empty(Auth::guard('admin')->user()->id))
                         <li><a href="{{ url('/admin/login') }}">Admin Login</a></li>
