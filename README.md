@@ -9,6 +9,6 @@ First download and or clone repo.
 => Then generate a application key. Write this command : php artisan key:generate
 => Then you need to migrate a tables. Write this command : php artisan migrate
 
-Now, open your browser and run your project.
+Now, open your browser and run your project..
 
 
